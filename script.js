@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.nav');
 
@@ -71,4 +73,21 @@ if (carousel) {
   carousel.addEventListener('focusout', start);
   showSlide(0);
   start();
+}
+
+const revealItems = document.querySelectorAll('.intro,.products,.product-showcase,.visual-gallery,.service-band,.quote-section,.location-section,.about');
+revealItems.forEach(item => item.classList.add('scroll-reveal'));
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+  revealItems.forEach(item => revealObserver.observe(item));
+} else {
+  revealItems.forEach(item => item.classList.add('is-visible'));
 }
