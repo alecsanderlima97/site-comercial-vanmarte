@@ -43,6 +43,17 @@ body{margin:0;color:var(--ink);background:var(--sand);font-family:Arial,Helvetic
 .product-number{font-weight:700;color:var(--wood);margin:auto 0 1.5rem}
 .product-card h3{font-family:Georgia,serif;font-size:1.65rem;margin:0 0:.4rem}
 .product-card p:last-child{font-size:.91rem;margin:0}
+.product-showcase{padding:clamp(4rem,8vw,7rem) clamp(1.2rem,9vw,10rem);background:#f8f3e8;color:#17261f}
+.showcase-heading{display:grid;grid-template-columns:1fr 1.2fr .9fr;gap:2rem;align-items:end;margin-bottom:2rem}
+.showcase-heading h2{font-size:clamp(2rem,3.5vw,3.4rem);margin:0;line-height:1.05}
+.showcase-heading>p:last-child{margin:0;color:#56625b;max-width:360px}
+.showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.showcase-card{border:1px solid #c7baa5;background:#fff;display:flex;flex-direction:column;min-width:0}
+.showcase-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.showcase-card>div{padding:1.25rem 1.3rem 1.5rem}
+.showcase-label{margin:0 0 .45rem;color:#087f74;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem;font-weight:800}
+.showcase-card h3{font-family:Georgia,serif;font-size:1.5rem;line-height:1.1;margin:0 0 .55rem}
+.showcase-card div>p:last-child{margin:0;color:#56625b;font-size:.92rem;line-height:1.5}
 .service-band{background:var(--forest);color:#fff;padding:clamp(4rem,8vw,8rem) clamp(1.2rem,9vw,10rem);display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem}
 .service-band h2{font-size:clamp(2.1rem,3.5vw,3.5rem)}
 .service-list{border-top:1px solid rgba(255,255,255,.3)}
@@ -133,4 +144,4 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;background:rgba(5,25,1
 .gallery-carousel{height:min(50vw,560px);min-height:400px}
 .gallery-track{position:absolute;inset:0}
 .gallery-item{height:auto}
-@media(max-width:760px){.topbar{height:76px}.nav{top:76px}.brand-logo{width:172px;height:56px}.gallery-carousel{height:540px;min-height:0}.location-section{grid-template-columns:1fr;gap:2rem}.map-frame,.map-frame iframe{min-height:330px;height:330px}}
+@media(max-width:760px){.topbar{height:76px}.nav{top:76px}.brand-logo{width:172px;height:56px}.gallery-carousel{height:540px;min-height:0}.location-section{grid-template-columns:1fr;gap:2rem}.map-frame,.map-frame iframe{min-height:330px;height:330px}.product-showcase{padding:4rem 1.2rem}.showcase-heading,.showcase-grid{grid-template-columns:1fr}.showcase-heading{gap:1rem}.showcase-card img{aspect-ratio:4/3}}
